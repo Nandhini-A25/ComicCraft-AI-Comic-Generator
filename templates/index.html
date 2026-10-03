@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ComicCraft — AI Comic Creator</title>
+  <link rel="stylesheet" href="/static/css/app.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <span class="badge">REAL AI IMAGE GENERATION</span>
+      <h1>ComicCraft</h1>
+      <p>Turn one idea into a five-panel illustrated comic using Gemini AI.</p>
+    </section>
+
+    <section class="card">
+      <form action="/generate" method="post" id="comic-form">
+        <label>Story Prompt
+          <textarea name="story_prompt" rows="5" required placeholder="A brave fox discovers a hidden city beneath an enchanted forest..."></textarea>
+        </label>
+
+        <div class="grid">
+          <label>Main Character
+            <input name="character_name" value="Alex" required>
+          </label>
+          <label>Setting
+            <input name="setting" value="enchanted forest" required>
+          </label>
+          <label>Tone
+            <select name="tone">
+              <option>adventurous</option><option>funny</option><option>dramatic</option><option>mysterious</option><option>heartwarming</option>
+            </select>
+          </label>
+          <label>Art Style
+            <select name="art_style">
+              <option>comic book</option><option>anime-inspired</option><option>pixel art</option><option>graphic novel</option><option>watercolor illustration</option>
+            </select>
+          </label>
+        </div>
+
+        <button class="primary" type="submit">Create My Comic</button>
+        <p class="hint">Generation makes 5 story panels + 5 real AI images + 1 PDF. It can take a few minutes.</p>
+      </form>
+    </section>
+  </main>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

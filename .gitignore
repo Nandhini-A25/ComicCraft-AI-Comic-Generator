@@ -1,0 +1,11 @@
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.env
+.vscode/
+.idea/
+.pytest_cache/
+static/panels/*.png
+static/exports/*.pdf
